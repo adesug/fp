@@ -14,7 +14,7 @@ export default function MoviesTable() {
 
 	useEffect(() => {
 		fetchMovies();
-	}, []);
+	}, [fetchMovies]);
 
 	const deleteMovie = (id) => {
 		axios.delete(

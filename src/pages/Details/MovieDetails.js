@@ -22,13 +22,12 @@ export default function MovieDetails({match}) {
   const [movieData, setMovieData] = useState({})
 
   useEffect(() => {
-     fetchMovie()
-  }, [])
-
-  const fetchMovie = async() => {
+   const fetchMovie = async() => {
       const res = await axios.get(`https://backendexample.sanbersy.com/api/data-movie/${match.params.id}`)
       setMovieData(res.data)
    }
+     fetchMovie()
+  }, [match.params.id])
 
    const imageStyle = {
       width: 'auto',

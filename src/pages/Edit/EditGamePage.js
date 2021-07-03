@@ -26,6 +26,7 @@ export default function EditGamePage({match}) {
 
 	useEffect(() => {
 		fetchGame();
+		// eslint-disable-next-line
 	}, []);
 
 	const fetchGame = async () => {

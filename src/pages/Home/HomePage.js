@@ -17,7 +17,7 @@ export default function HomePage() {
    useEffect(() => {
       fetchMovies()
       fetchGames()
-   },[])
+   },[fetchGames,fetchMovies])
 
 	return (
 		<>

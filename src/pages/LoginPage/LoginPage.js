@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function LoginPage() {
 	const {removeNav, restoreNav} = useContext(NavContext);
-	const {setUser, setIsLoggedIn, isLoggedIn} = useContext(AuthContext);
+	const {setUser, setIsLoggedIn} = useContext(AuthContext);
    const [input, setInput] = useState({
 		email: "",
 		password: "",

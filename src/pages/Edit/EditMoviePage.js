@@ -25,6 +25,7 @@ export default function EditMoviePage({match}) {
 
 	useEffect(() => {
 		fetchMovie();
+		// eslint-disable-next-line
 	}, []);
 
 	useEffect(() => {

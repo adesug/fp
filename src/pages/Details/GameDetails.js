@@ -21,13 +21,12 @@ export default function GameDetails({match}) {
   const [gameData, setGameData] = useState({})
 
   useEffect(() => {
-     fetchGame()
-  }, [])
-
-  const fetchGame = async() => {
+   const fetchGame = async() => {
       const res = await axios.get(`https://backendexample.sanbersy.com/api/data-game/${match.params.id}`)
       setGameData(res.data)
    }
+     fetchGame()
+  }, [match.params.id])
 
    const imageStyle = {
       width: 'auto',

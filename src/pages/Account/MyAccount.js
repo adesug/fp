@@ -34,7 +34,6 @@ export default function MyAccount() {
 
 	//Validation
 	useEffect(() => {
-		console.log(user.password);
 		if (input.new_password !== "") {
 			if (/\S/.test(input.new_password)) {
 				setIsValid({...isValid, password: true});
@@ -42,7 +41,7 @@ export default function MyAccount() {
 				setIsValid({...isValid, password: false});
 			}
 		}
-	}, [input.new_password]);
+	}, [input.new_password, isValid]);
 
 	useEffect(() => {
 		if (input.new_password !== "" && input.new_confirm_password !== "") {
@@ -52,7 +51,7 @@ export default function MyAccount() {
 				setIsValid({...isValid, passMatch: true});
 			}
 		}
-	}, [input.new_password, input.new_confirm_password]);
+	}, [input.new_password, input.new_confirm_password, isValid]);
 
 	useEffect(() => {
 		if (Object.values(input).every(el => el !== "")) {
@@ -64,7 +63,7 @@ export default function MyAccount() {
 		} else {
 			setFormValid(false);
 		}
-	}, [isValid, setIsValid]);
+	}, [isValid, setIsValid, input]);
 
 	const changePass = event => {
 		event.preventDefault();

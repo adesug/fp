@@ -9,7 +9,7 @@ export default function Movies() {
 
    useEffect(() => {
       fetchMovies()
-   },[])
+   },[fetchMovies])
 
 	return (
 		<>

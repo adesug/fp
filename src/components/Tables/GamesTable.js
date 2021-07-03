@@ -14,7 +14,7 @@ export default function GamesTable() {
 
 	useEffect(() => {
 		fetchGames();
-	}, []);
+	}, [fetchGames]);
 
 	const deleteGame = (id) => {
 		axios.delete(

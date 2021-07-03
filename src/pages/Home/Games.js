@@ -9,7 +9,7 @@ export default function Games() {
 
    useEffect(() => {
       fetchGames()
-   },[])
+   },[fetchGames])
 
 	return (
 		<>
