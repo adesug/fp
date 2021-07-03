@@ -67,7 +67,8 @@ export default function SignupPage() {
 				setIsValid({...isValid, name: false});
 			}
 		}
-	}, [input.name,setIsValid,isValid]);
+		// eslint-disable-next-line
+	}, [input.name]);
 
 	useEffect(() => {
 		if (input.email !== "") {
@@ -81,7 +82,8 @@ export default function SignupPage() {
 				setIsValid({...isValid, email: false});
 			}
 		}
-	}, [input.email,setIsValid,isValid]);
+		// eslint-disable-next-line
+	}, [input.email]);
 
 	useEffect(() => {
 		if (input.password !== "") {
@@ -91,7 +93,8 @@ export default function SignupPage() {
 				setIsValid({...isValid, password: false});
 			}
 		}
-	}, [input.password,isValid,setIsValid]);
+		// eslint-disable-next-line
+	}, [input.password]);
 
 	//Validate pass match
 	useEffect(() => {
@@ -102,7 +105,8 @@ export default function SignupPage() {
 				setIsValid({...isValid, passMatch: true});
 			}
 		}
-	}, [input.password, input.confirmPassword,isValid,setIsValid]);
+		// eslint-disable-next-line
+	}, [input.password, input.confirmPassword]);
 
 	//Confirm validation
 	//Check if all isValid value is true
@@ -116,7 +120,8 @@ export default function SignupPage() {
 		} else {
 			setFormValid(false);
 		}
-	}, [isValid, setIsValid,input]);
+		// eslint-disable-next-line
+	}, [isValid, setIsValid]);
 
 	const handleSignup = event => {
 		event.preventDefault();
